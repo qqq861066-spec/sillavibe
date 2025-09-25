@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import os
 
 # Page config
 st.set_page_config(
@@ -25,8 +24,7 @@ st.markdown("""
 st.title("지역별/연도별 경제활동 데이터 조회")
 
 # Load data
-script_dir = os.path.dirname(__file__)
-csv_path = os.path.join(script_dir, "경제활동_통합.csv")
+csv_path = "/Users/pakjunhyo/바이브코딩/lets go/경제활동_통합.csv"
 df = pd.read_csv(csv_path)
 
 # Data manipulation
