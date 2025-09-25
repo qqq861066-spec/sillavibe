@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import os
 
 # Page config
 st.set_page_config(
@@ -24,7 +25,9 @@ st.markdown("""
 st.title("지역별/연도별 경제활동 데이터 조회")
 
 # Load data
-df = pd.read_csv("경제활동_통합.csv")
+script_dir = os.path.dirname(__file__)
+csv_path = os.path.join(script_dir, "경제활동_통합.csv")
+df = pd.read_csv(csv_path)
 
 # Data manipulation
 df['지역'] = df['지역'].replace('계', '전국')
