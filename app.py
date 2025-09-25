@@ -24,7 +24,7 @@ st.markdown("""
 st.title("지역별/연도별 경제활동 데이터 조회")
 
 # Load data
-df = pd.read_csv("/Users/pakjunhyo/바이브코딩/lets go/경제활동_통합.csv")
+df = pd.read_csv("경제활동_통합.csv")
 
 # Data manipulation
 df['지역'] = df['지역'].replace('계', '전국')
